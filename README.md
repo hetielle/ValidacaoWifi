@@ -4,9 +4,9 @@ Esse projeto é uma Aplicação Web que coleta os CPF para identificar os usuár
 
 ## 📋 Funcionalidades:
 
-- Validar CPF com CPFValidator
-- Criptografar CPF com RSA
-- Cadastrar CPF crriptografado no banco de dados
+- Validar o CPF com CPFValidator
+- Criptografar o CPF com RSA
+- Cadastrar o CPF crriptografado no banco de dados
 
 ## 🛠️ Tecnologias utilizadas:
 
