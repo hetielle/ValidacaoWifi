@@ -1,38 +1,98 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+*:before,
+*:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+body{
+  height: 100vh;
+  background:rgb(205, 204, 204);
+}
+
+.container{
+  background-color: rgb(241, 241, 241);
+  width: 50%;
+  min-width: 390px;
+  padding: 35px 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 20px;
+  box-shadow: 20px 30px 25px rgba(0, 0, 0, 0.15);
+}
+
+h1{
+  font-size: 30px;
   text-align: center;
+  color: rgb(26, 25, 25);
+  margin-bottom: 15px;
+  font-weight: 500;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p{
+  position: relative;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  color: rgb(128, 128, 128);
+  font-size: 14px;
+  font-weight: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form{
+  width: 100%;
+  position: relative;
+  margin: 30px auto 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.row{
+  width: 100%;
+  display: grid;
+  /* grid-template-columns: repeat(
+    auto-fit, 
+    minmax(3000px, 1fr));
+    grid-gap: 20px 30px;
+    margin-bottom: 20px; */
+}
+
+label{
+  color: rgb(108, 2, 2);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input{
+  width: 100%;
+  font-weight: 400;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1.2px solid rgb(133, 133, 133);
+  margin-top: 5px;
+}
+
+input:focus{
+  outline: none;
+  border-color: rgb(194, 194, 194);
+}
+
+button{
+  border: none;
+  padding: 10px 20px;
+  background: rgb(108, 2, 2);
   color: white;
+  border-radius: 8px;
+  margin-top: 30px;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover{
+  background: rgb(149, 3, 3);
+  cursor: pointer;
 }
