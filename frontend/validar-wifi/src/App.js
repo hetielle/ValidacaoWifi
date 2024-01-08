@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import TermsComponent from './ui/components/TermsComponent';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element= {<Home/>}/>
+          <Route path='/termo' element= {<TermsComponent/>}/>
         </Routes>
       </BrowserRouter>
 

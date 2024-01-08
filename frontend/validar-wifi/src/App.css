@@ -55,11 +55,6 @@ form{
 .row{
   width: 100%;
   display: grid;
-  /* grid-template-columns: repeat(
-    auto-fit, 
-    minmax(3000px, 1fr));
-    grid-gap: 20px 30px;
-    margin-bottom: 20px; */
 }
 
 label{
@@ -82,6 +77,13 @@ input:focus{
   border-color: rgb(194, 194, 194);
 }
 
+.term{
+  text-align: left;
+  padding-top: 10px;
+  color: rgb(26, 25, 25);
+  font-weight: 600;
+}
+
 button{
   border: none;
   padding: 10px 20px;
@@ -95,4 +97,31 @@ button{
 button:hover{
   background: rgb(149, 3, 3);
   cursor: pointer;
+}
+
+.custom-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-checkbox + .custom-checkbox-label::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1.2px solid rgb(133, 133, 133);
+  background-color: #fff; /* Cor de fundo do checkbox */
+  border-radius: 90px;
+  margin-right: 9px; /* Espaçamento entre o checkbox e o texto */
+  vertical-align: middle;
+}
+
+/* Estilizar o checkbox marcado */
+.custom-checkbox:checked + .custom-checkbox-label::before {
+  background-color: #252525; /* Cor de fundo quando o checkbox está marcado */
+}
+
+.custom-checkbox-label {
+  font-size: 14px;
+  color: rgb(26, 25, 25);
 }

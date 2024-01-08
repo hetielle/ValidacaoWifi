@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useCadastrarUsuario } from '../../hooks/cadastrarUsuario.hook';
+import { Link } from 'react-router-dom';
+
 
 const Main = () => {
 
@@ -23,8 +25,8 @@ const Main = () => {
 
     return (
       <div className="container">
-        <h1>INSIRA SEUS DADOS PARA ACESSAR O WIFI</h1>
-        <p>Seus dados serão utilizados de uma maneira segura</p>
+        <h1>HOSPITAL CENTENÁRIO</h1>
+        <p>Insira seus dados para uma conexão segura e confiável</p>
         
         <form onSubmit={onSubmit}>
           
@@ -34,11 +36,15 @@ const Main = () => {
               <label htmlFor="cpf">CPF</label>
               <input type="text" name="cpf" placeholder="000.000.000-00" onChange={handleChange}/>
 
+              <input type="checkbox" name="termo" id="termo" className='custom-checkbox'/>
+              <label htmlFor='termo' className='custom-checkbox-label'>Eu aceito os <Link to={"/termo"}>Termos de Serviço</Link></label>
+              
               <button type='submit'>CADASTRAR</button>
               
             </div>
           </div>
 
+          
         </form>
       
       </div>
