@@ -23,10 +23,11 @@ public class UsuarioService {
         
         CPFService cpfService = new CPFService();
 
-        if(cpfService.validarCPF(usuario.getCpf())){
+        if(cpfService.validarCPF(usuario.getCpf()) && usuario.getCienciaTermo()){
             
             UsuarioAdapter usuarioAdapter = new UsuarioAdapter();
             usuarioAdapter.setCpf(Crypto.encryptRSA(usuario.getCpf().toString()));
+            usuarioAdapter.setCienciaTermo(usuario.getCienciaTermo());
             usuarioAdapterRepository.save(usuarioAdapter);
             return new ResponseEntity<>("Cadastro realizado com sucesso", HttpStatus.CREATED);
             

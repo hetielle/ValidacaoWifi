@@ -1,4 +1,5 @@
 import '../style/Terms.css';
+import { Link } from 'react-router-dom';
 
 const TermsComponent = () => {
 
@@ -60,8 +61,7 @@ const TermsComponent = () => {
             </p>
             
             <div className="box-buttons">
-              <button className="btn red-btn">Aceitar</button>
-              <button className="btn gray-btn">Recusar</button>
+              <button className="btn red-btn"><Link to={"/"}>Voltar</Link></button>
             </div>
         </div>
     </div>

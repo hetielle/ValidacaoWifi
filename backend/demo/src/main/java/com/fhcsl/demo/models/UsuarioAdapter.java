@@ -28,4 +28,5 @@ public class UsuarioAdapter{
     @Column(nullable = false, length = 300) 
     private byte[] cpf;
 
+    private Boolean cienciaTermo;
 }

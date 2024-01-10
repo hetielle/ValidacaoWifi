@@ -55,16 +55,16 @@ body{
     color: red;
 }
 
-.buttons{
-    
+
+.box-buttons{
     display: flex;
-    padding: 0 15px;
+    padding: 0;
     justify-content: space-between;
 }
 
 .btn{
     height: 40px;
-    width: calc(50% - 6px);
+    width: calc(50% - 50px);
     border: 0;
     border-radius: 6px;
     font-size: 15px;
@@ -73,6 +73,7 @@ body{
     transition: .3s linear;
     border-radius: 8px;
     text-transform: uppercase;
+    
 }
 
 .red-btn{
@@ -80,15 +81,11 @@ body{
     margin-right: 10px;
 }
 
-.gray-btn{
-    background-color: gray;
+.btn a{
+    color: white;
+    text-decoration: none;
 }
 
 .red-btn:hover{
-    opacity: .6;
-}
-
-.gray-btn:hover{
-    opacity: .6;
-    background-color: gray;
+    opacity: .8;
 }

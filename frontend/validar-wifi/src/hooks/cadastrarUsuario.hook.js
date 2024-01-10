@@ -6,10 +6,10 @@ export function useCadastrarUsuario(){
 
     const [error] = useState();
 
-    async function cadastrarUsuario(cpf){
+    async function cadastrarUsuario(cpf, cienciaTermo){
 
         try{
-            await criarUsuarioApi(cpf);
+            await criarUsuarioApi(cpf, cienciaTermo);
         }
         catch(errorApi){
             toast.error(errorApi);

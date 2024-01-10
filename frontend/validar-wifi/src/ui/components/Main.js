@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 const Main = () => {
 
   const [formInput, setFormInput] = useState({
-    cpf: ''
+    cpf: '',
+    cienciaTermo: false
   })
 
   function handleChange(event){
@@ -15,12 +16,18 @@ const Main = () => {
       setFormInput((oldFormInput) => ({...oldFormInput, [name]:value}));
   }
 
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+
+    setFormInput((oldFormInput) => ({...oldFormInput, [name]:checked}));
+  }
+
   const {cadastrarUsuario} = useCadastrarUsuario();
 
   async function onSubmit(event){
       event.preventDefault();
 
-      await cadastrarUsuario(formInput.cpf);
+      await cadastrarUsuario(formInput.cpf, formInput.cienciaTermo);
   }
 
     return (
@@ -34,10 +41,30 @@ const Main = () => {
             <div className="column">
 
               <label htmlFor="cpf">CPF</label>
-              <input type="text" name="cpf" placeholder="000.000.000-00" onChange={handleChange}/>
+              <input 
+                type="text" 
+                name="cpf" 
+                placeholder="000.000.000-00" 
+                onChange={handleChange}
+              />
 
-              <input type="checkbox" name="termo" id="termo" className='custom-checkbox'/>
-              <label htmlFor='termo' className='custom-checkbox-label'>Eu aceito os <Link to={"/termo"}>Termos de Serviço</Link></label>
+              <div className="container-termo">
+
+                <input 
+                  type="checkbox" 
+                  name="cienciaTermo" 
+                  checked={formInput.cienciaTermo} 
+                  className='checkbox' 
+                  onChange={handleCheckboxChange}
+                />
+
+                <p className='checkbox-label'>
+                  Eu aceito os <Link to={"/termo"}>Termos de Serviço</Link>
+                </p>
+
+              </div>
+
+              <br/>
               
               <button type='submit'>CADASTRAR</button>
               
