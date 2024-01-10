@@ -52,7 +52,7 @@ body{
 }
 
 .terms-box h4 span{
-    color: red;
+    color: rgb(108, 2, 2);
 }
 
 
@@ -69,7 +69,7 @@ body{
     border-radius: 6px;
     font-size: 15px;
     font-weight: 500;
-    color: white;
+    color: rgb(219, 219, 219);
     transition: .3s linear;
     border-radius: 8px;
     text-transform: uppercase;
@@ -82,7 +82,7 @@ body{
 }
 
 .btn a{
-    color: white;
+    color: rgb(219, 219, 219);
     text-decoration: none;
 }
 

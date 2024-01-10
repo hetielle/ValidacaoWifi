@@ -14,6 +14,7 @@ function App() {
 
       <BrowserRouter>
         <Routes>
+          <Route path='*' element= {<Error404/>}/>
           <Route path='/' element= {<Home/>}/>
           <Route path='/termo' element= {<TermsComponent/>}/>
         </Routes>
